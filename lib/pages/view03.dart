@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/view04.dart';
-import 'package:flutter_application_1/pages/view05.dart';
+import 'package:flutter_application_1/pages/register.dart';
 
 
 class View03 extends StatelessWidget {

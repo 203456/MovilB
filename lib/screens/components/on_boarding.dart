@@ -62,8 +62,7 @@ class _OnBoardingState extends State<OnBoarding> {
     return SafeArea(
       
     
-      child: Column(
-         
+      child: Column(    
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
