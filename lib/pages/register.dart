@@ -83,7 +83,7 @@ class _RegisterState extends State<Register> {
                                 ),
                                 prefix: Icon(Icons.person),           
                                 hintText: ' Nombre',hintStyle: TextStyle(color: Color.fromARGB(151, 156, 152, 152)),
-
+                                
                 
                               ),
                             ),
@@ -138,6 +138,7 @@ class _RegisterState extends State<Register> {
                                 ),
                                 prefix: Icon(Icons.lock),           
                                 hintText: 'Contraseña', hintStyle: TextStyle(color: Color.fromARGB(151, 156, 152, 152)),           
+                                suffix: Icon(Icons.visibility_off)
                               ),
                             ),
                           ),

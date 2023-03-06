@@ -9,7 +9,7 @@ class CambiarContra extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 26, 26, 112),
+        backgroundColor: const Color.fromARGB(255, 26, 26, 112),
         titleSpacing: 0.0,
         title: const Text('Recuperar contraseña'),
         leading: IconButton(
@@ -65,7 +65,8 @@ class CambiarContra extends StatelessWidget {
                           ),
                           const Padding(
                             padding:  EdgeInsets.only(bottom: 20),
-                            child: TextField(                           
+                            child: TextField(         
+                              obscureText: true,                  
                               decoration: InputDecoration(                               
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -75,7 +76,7 @@ class CambiarContra extends StatelessWidget {
                                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                   borderSide: BorderSide(color: Colors.blue),
                                 ),
-                                prefix: Icon(Icons.email),  
+                                prefix: Icon(Icons.lock),  
                                          
                                 hintText: 'Contraseña', hintStyle: TextStyle(color: Color.fromARGB(151, 156, 152, 152)),    
                                                                                             
@@ -84,15 +85,16 @@ class CambiarContra extends StatelessWidget {
                           ), 
                           
                           const Padding(
-                            padding: EdgeInsets.only(right: 232, bottom: 4),
+                            padding: EdgeInsets.only(right: 200, bottom: 4),
                             child: Text(
                               style: TextStyle(fontSize: 17, color: Color.fromARGB(255, 0, 0, 0)),
-                              "Correo electronico"
+                              "Confirmar contraseña"
                             ),
                           ),
                           const Padding(
                             padding:  EdgeInsets.only(bottom: 290),
-                            child: TextField(                           
+                            child: TextField(   
+                              obscureText: true,                        
                               decoration: InputDecoration(                               
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -102,9 +104,9 @@ class CambiarContra extends StatelessWidget {
                                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                   borderSide: BorderSide(color: Colors.blue),
                                 ),
-                                prefix: Icon(Icons.email),  
+                                prefix: Icon(Icons.lock),  
                                          
-                                hintText: 'Correo electronico', hintStyle: TextStyle(color: Color.fromARGB(151, 156, 152, 152)),    
+                                hintText: 'Confirmar tu nueva contraseña', hintStyle: TextStyle(color: Color.fromARGB(151, 156, 152, 152)),    
                                                                                             
                               ),
                             ),

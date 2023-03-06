@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799486739183",
+    "project_id": "all4mypet",
+    "storage_bucket": "all4mypet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799486739183:android:e22ef6bc491d949644111a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799486739183-gotn1907e7ojfqeh6vjqvammcae40n4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrHM0Hgwz6sMvE5tE_SmTRYHF25VUm3tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799486739183-gmn68p96t6eoa7s6e5g66ar1a464c2v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

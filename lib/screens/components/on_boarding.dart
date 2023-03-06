@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/pantalla_principal.dart';
 import 'package:flutter_application_1/pages/view04.dart';
 import 'package:flutter_application_1/screens/components/content_boarding.dart';
 
@@ -109,7 +110,7 @@ class _OnBoardingState extends State<OnBoarding> {
               onPressed: () async {
                 currentPage == listBoarding.length - 1
                     ? Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const Login()))
+                        MaterialPageRoute(builder: (_) => const PantallaPrincipal()))
                     : varController.nextPage(
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);

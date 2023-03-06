@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Appuuno</string>
+    <string name="facebook_app_id">236556255474732</string>
+    <string name="fb_login_protocol_scheme">fb236556255474732</string>
+    <string name="facebook_client_token">30c51f6ba5ec24a4a156ee9d21f8705a</string>
+</resources>

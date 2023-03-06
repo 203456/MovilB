@@ -1,14 +1,32 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Utils/Auth.dart';
 import 'package:flutter_application_1/pages/cambiar_contrasenia.dart';
 import 'package:flutter_application_1/pages/recuperar.dart';
 import 'package:flutter_application_1/pages/register.dart';
 import 'package:flutter_application_1/pages/view04.dart';
+import 'package:flutter_application_1/screens/components/home_screen_facebook.dart';
+import 'package:flutter_application_1/screens/components/home_screen_google.dart';
+import 'package:flutter_application_1/screens/components/on_boarding.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class PantallaPrincipal extends StatelessWidget {
+
+
+
+
+class PantallaPrincipal extends StatefulWidget {
   const PantallaPrincipal({super.key});
 
   @override
+  State<PantallaPrincipal> createState() => _PantallaPrincipalState();
+}
+
+class _PantallaPrincipalState extends State<PantallaPrincipal> {
+
+  @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: Center(
         child: Column(
@@ -22,23 +40,18 @@ class PantallaPrincipal extends StatelessWidget {
               padding: const  EdgeInsets.only(top: 80.0), 
               child: SizedBox(
                 height: 50,
-                width: 300,
+                width: 360,
                 
                 child:TextButton.icon(
                   style: TextButton.styleFrom(
                     
-                    backgroundColor: Color.fromARGB(255, 120, 97, 255),
+                    backgroundColor: const Color.fromARGB(255, 120, 97, 255),
                     shape:RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24.0),
                     ), 
                   ),
-                  onPressed: () => {                                 
-                   Navigator.push(
-                    context, 
-                    MaterialPageRoute(
-                      builder: (_) => const Register()
-                    )
-                   )
+                  onPressed: (){
+                    signup(context);
                   },
                   icon: Image.asset('assets/images/Google.png'),
                   label: const Text(
@@ -51,7 +64,7 @@ class PantallaPrincipal extends StatelessWidget {
               padding: const  EdgeInsets.only(top: 20.0), 
               child: SizedBox(
                 height: 50,
-                width: 300,
+                width: 360,
                 
                 child:TextButton.icon(
                   style: TextButton.styleFrom(
@@ -61,13 +74,13 @@ class PantallaPrincipal extends StatelessWidget {
                       borderRadius: BorderRadius.circular(24.0),
                     ), 
                   ),
-                  onPressed: () => {                                 
-                   Navigator.push(
-                    context, 
-                    MaterialPageRoute(
-                      builder: (_) => const Recuperar()
-                    )
-                   )
+                  onPressed: (){ signInWithFacebook();                   
+                  Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (_) => const  HomeScreenFb()
+                      )
+                  );
                   },
                   icon: Image.asset('assets/images/facebook.png'),
                   label: const Text(
@@ -80,7 +93,7 @@ class PantallaPrincipal extends StatelessWidget {
               padding: const  EdgeInsets.only(top: 20.0), 
               child: SizedBox(
                 height: 50,
-                width: 300,
+                width: 360,
                 
                 child:TextButton.icon(
                   style: TextButton.styleFrom(
@@ -95,7 +108,7 @@ class PantallaPrincipal extends StatelessWidget {
                    Navigator.push(
                     context, 
                     MaterialPageRoute(
-                      builder: (_) => const CambiarContra()
+                      builder: (_) => const Register()
                     )
                    )
                   },
